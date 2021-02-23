@@ -1,0 +1,9 @@
+/src
+**/.secrets/
+**/certs/
+**/keycloak_db/
+keycloak-containers
+
+**/.env
+**/cloudflare.ini
+**/*.sqlite3
