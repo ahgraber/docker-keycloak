@@ -7,6 +7,12 @@ SERVER="server"
 REGISTRY="ahgraber"
 TAG=${@:2}
 
+# check version provided
+[[ ${KEYCLOAK_VERSION} = --tag* ]] && \
+	echo "ERROR: Did you forget to include the version number?" && \
+	echo "Call with 'buildx.sh {VERSION} --tag {REGISTRY}/{IMAGE}:{TAG}'" && \
+	exit 1
+
 echo "Building for version ${KEYCLOAK_VERSON}"
 echo "Tagging with ${TAG}"
 
